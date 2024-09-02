@@ -138,6 +138,7 @@ def check_tags(session, chat_id, ds_user_id, bot, username, token, tg_user_id):
                 # Check for trigger phrases and respond if found
                 reply_message = check_for_triggers(current_message)
                 if reply_message:
+                    print(f"Replying with: {reply_message}")  # Debugging print statement for confirmation
                     send_message(session, chat_id, reply_message, 1, 0)  # Send reply immediately
                 
                 last_id = current_id
@@ -173,6 +174,7 @@ def check_for_triggers(message_content):
     message_content_lower = message_content.lower()
     for trigger, response in TRIGGERS_AND_RESPONSES.items():
         if trigger in message_content_lower:
+            print(f"Trigger matched: {trigger}, Responding with: {response}")  # Debugging print statement
             return response
     return None
 
@@ -212,9 +214,13 @@ def main_thread(token, config):
             typing_delay = randint(*map(int, config['typing_delay'].split('-'))) if '-' in config['typing_delay'] else int(config['typing_delay'])
             lock.release()
 
+            # Here, you would retrieve the actual message content from Discord
+            current_message_content = "This is where you'd fetch the actual message content from Discord"
+
             # Check if the message matches any trigger phrase
-            reply_message = check_for_triggers(user_info['username'])  # Assuming you want to check triggers based on the username
+            reply_message = check_for_triggers(current_message_content)
             if reply_message:
+                print(f"Replying with: {reply_message}")  # Debugging print statement for confirmation
                 message_id = send_message(session, chat_id, reply_message, typing_delay, config['delay_every_msg'])
                 if message_id:
                     logger.success(f'Сообщение [{reply_message}] от [{username}] успешно отправлено')
