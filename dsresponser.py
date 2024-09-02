@@ -16,8 +16,6 @@ logger.add(stderr, format="<white>{time:HH:mm:ss}</white> | <level>{level: <8}</
 clear = lambda: system('cls')
 
 # Configure console title and logging
-print('Telegram Channel - https://t.me/n4z4v0d & https://t.me/earlyberkut\n')
-windll.kernel32.SetConsoleTitleW('Discord Bot | by NAZAVOD&EARLY BERKUT')
 lock = threading.Lock()
 
 # Function to load triggers and responses from a JSON file
