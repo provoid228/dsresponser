@@ -4,6 +4,7 @@ from random import randint
 from time import sleep
 from json import loads, load
 from os import system
+from ctypes import windll
 from sys import stderr
 from loguru import logger
 from urllib3 import disable_warnings
@@ -16,6 +17,8 @@ logger.add(stderr, format="<white>{time:HH:mm:ss}</white> | <level>{level: <8}</
 clear = lambda: system('cls')
 
 # Configure console title and logging
+print('Telegram Channel - https://t.me/n4z4v0d & https://t.me/earlyberkut\n')
+windll.kernel32.SetConsoleTitleW('Discord Bot | by NAZAVOD&EARLY BERKUT')
 lock = threading.Lock()
 
 # Function to load triggers and responses from a JSON file
@@ -36,9 +39,15 @@ def load_tokens(tokens_file):
     with open(tokens_file, 'r', encoding='utf-8') as file:
         return [token.strip() for token in file]
 
-def load_proxy(proxy_file):
-    with open(proxy_file, 'r', encoding='utf-8') as file:
-        return file.read().splitlines()
+# Updated function to manually input proxy settings
+def input_proxy():
+    proxies = []
+    while True:
+        proxy = input('Введите proxy (формат: тип://ip:порт или пустую строку для завершения): ')
+        if not proxy:
+            break
+        proxies.append(proxy)
+    return proxies
 
 # Function to handle user input
 def get_user_input():
@@ -66,13 +75,12 @@ def get_user_input():
     delete_message_after_send = input('Удалять сообщение после отправки? (y/N): ').lower() == 'y'
     sleep_before_delete_msg = int(input('Время сна перед удалением сообщения после отправки: ')) if delete_message_after_send else None
     
-    use_proxy = input('Использовать proxy? (y/N) !! не проверено !!: ').lower() == 'y'
+    use_proxy = input('Использовать proxy? (y/N): ').lower() == 'y'
     
     proxy_config = {}
     if use_proxy:
         proxy_config['proxy_type'] = input('Введите тип proxy (http/https/socks4/socks5): ')
-        proxy_config['proxy_file'] = input('Перетяните файл с proxy: ')
-        proxy_config['proxies'] = load_proxy(proxy_config['proxy_file'])
+        proxy_config['proxies'] = input_proxy()  # Manually input proxy details
     
     delay_first_msg = input('Задержка перед отправкой ПЕРВОГО сообщения (пример: 0-20, или 50): ')
     delay_every_msg = input('Задержка перед отправкой последующих сообщений (пример: 0-20, или 50): ')
