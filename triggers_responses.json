@@ -1,0 +1,126 @@
+[
+    {
+        "trigger": "yooo",
+        "response": "Hey! What's up?"
+    },
+    {
+        "trigger": "congratulations",
+        "response": "Congrats! Well played!"
+    },
+    {
+        "trigger": "very nice explain",
+        "response": "Glad it helped! Let me know if you have more questions."
+    },
+    {
+        "trigger": "about 1 minute to go",
+        "response": "Get ready! It's almost time."
+    },
+    {
+        "trigger": "last call",
+        "response": "Last chance to join in! Don't miss out."
+    },
+    {
+        "trigger": "gl everyone",
+        "response": "Good luck to all! May the best player win."
+    },
+    {
+        "trigger": "hello everyone",
+        "response": "Hey everyone! How’s it going?"
+    },
+    {
+        "trigger": "good evening",
+        "response": "Good evening! How's your day been?"
+    },
+    {
+        "trigger": "thanks for helping",
+        "response": "You're welcome! Happy to assist."
+    },
+    {
+        "trigger": "good looking pfp",
+        "response": "Thanks! Appreciate the compliment."
+    },
+    {
+        "trigger": "what should i do",
+        "response": "Start by exploring the ecosystem and interacting with dApps. Have fun!"
+    },
+    {
+        "trigger": "what should i do in story",
+        "response": "Dive into the testnet, try out the dApps, and join the community activities!"
+    },
+    {
+        "trigger": "any news on staking",
+        "response": "Staking updates are in the announcements. Check there for the latest info."
+    },
+    {
+        "trigger": "how to stake",
+        "response": "You need at least 1024 IP tokens to stake right now. Check the ⁠📝│faq for details."
+    },
+    {
+        "trigger": "unable to stake",
+        "response": "Make sure you have the required 1024 IP tokens. Need help? Check the ⁠📝│faq."
+    },
+    {
+        "trigger": "how are you",
+        "response": "Doing great, thanks! How about you?"
+    },
+    {
+        "trigger": "what's up",
+        "response": "Just hanging out with the community. What's up with you?"
+    },
+    {
+        "trigger": "site under maintenance",
+        "response": "Yep, the team is working on it. Things will be back up soon!"
+    },
+    {
+        "trigger": "thanks youu",
+        "response": "You're welcome! Glad I could help."
+    },
+    {
+        "trigger": "how to stake less faucet",
+        "response": "Currently, the minimum is 1024 IP. Lower amounts aren't supported due to network load."
+    },
+    {
+        "trigger": "testnet too complicated",
+        "response": "I get it! Take your time and explore. The ⁠📝│faq might help clear things up."
+    },
+    {
+        "trigger": "check minor announcements",
+        "response": "Always a good idea! The latest updates are there."
+    },
+    {
+        "trigger": "good project",
+        "response": "Thanks! We’re building something special here."
+    },
+    {
+        "trigger": "good morning",
+        "response": "Morning! Ready to dive into some Story Protocol action?"
+    },
+    {
+        "trigger": "thanks yall",
+        "response": "Anytime! We're all here to help."
+    },
+    {
+        "trigger": "how are you doing",
+        "response": "I’m doing well, thanks for asking! What about you?"
+    },
+    {
+        "trigger": "welcome",
+        "response": "Welcome to the community! Feel free to ask any questions."
+    },
+    {
+        "trigger": "go and check",
+        "response": "Will do! Thanks for the heads-up."
+    },
+    {
+        "trigger": "hmmm",
+        "response": "Something on your mind?"
+    },
+    {
+        "trigger": "search your evm wallet",
+        "response": "Here’s the link to check your transactions: https://testnet.storyscan.xyz/"
+    },
+    {
+        "trigger": "stake on validator",
+        "response": "You’ll need at least 1024 IP to stake on a validator. Check the ⁠📝│faq for more info."
+    }
+]
