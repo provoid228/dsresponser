@@ -4,7 +4,6 @@ from random import randint
 from time import sleep
 from json import loads, load
 from os import system
-from ctypes import windll
 from sys import stderr
 from loguru import logger
 from urllib3 import disable_warnings
